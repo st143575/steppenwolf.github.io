@@ -91,8 +91,7 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 
 
 # Data statistics:
-{% asset_img table_8.png 500 400 %}
-{% asset_img table_1.png 500 400 %}
+{% asset_img table_8.png 500 400 %} {% asset_img table_1.png 500 400 %}
 
 
 # How does FREB-TQA differentiate from previous TQA benchmarks?
