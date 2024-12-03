@@ -18,10 +18,12 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 **RQ1:** Are TQA systems robust against table structure changes?
   - **RQ1.1:** Do TQA systems exhibit any positional biases?
   - **RQ1.2:** Do TQA systems have a bias towards particular table layouts?
+
 **RQ2:** Can TQA systems pay attention to relevant cells while being robust against their intrinsic knowledge or positional biases?
   - **RQ2.1:** To what extent TQA systems bypass relevant cells to derive their answers?
   - **RQ2.2:** Would TQA systems bypass the whole table and rely on their intrinsic knowledge learned from training to answer the question?
   - **RQ2.3:** To what extent TQA systems bypass table cell values and rely on the position of relevant cells?
+
 **RQ3:** Are TQA systems robust against value changes?
 - **RQ3.1:** To what extent TQA systems perform correct aggregations and adapt answers to the value changes accordingly?
 - **RQ3.2:** Do TQA systems articulate correct answers because of their biases to certain values?
