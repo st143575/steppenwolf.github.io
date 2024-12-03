@@ -91,8 +91,8 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 
 
 # Data statistics:
-{% asset_img table_8.png %}
-
+{% asset_img table_8.png %}  
+{% asset_img table_2.png %}  
 {% asset_img table_1.png %}
 
 
@@ -108,7 +108,7 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 - **Pipeline systems:**
   - **TaPas:** first predicts relevant cells and an aggregation function, then produces answers using a numeric tool
   - **Binder:** first generate intermediate representations (e.g. SQL queries) using GPT-3.5, then execute the queries using a program interpreter
-- **Of-the-shelf LLMs:**
+- **Off-the-shelf LLMs:**
   - **GPT-3.5:** three-shot prompting
   - **LLaMA-7b-chat:** LORA fine-tuning
 
@@ -119,7 +119,15 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 
 
 # What are the results of the experiments?
-
+{% asset_img figure_3.png %}
+{% asset_img figure_4.png %}
+{% asset_img table_5.png %}
+{% asset_img table_6.png %}
+{% asset_img table_7.png %}
+{% asset_img table_9.png %}
+{% asset_img table_10.png %}
+{% asset_img table_11.png %}
+{% asset_img table_12.png %}
 
 # What conclusions are drawn from the results?
 - All systems suffer from substantial robustness issues.
