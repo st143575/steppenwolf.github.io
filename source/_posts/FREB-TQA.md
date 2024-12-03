@@ -91,7 +91,12 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 
 
 # Data statistics:
-{% asset_img table_8.png 500 400 %} {% asset_img table_1.png 500 400 %}
+<!-- {% asset_img table_8.png 400 300 %} -->
+<!-- {% asset_img table_1.png 400 300 %} -->
+<div style="display: flex; justify-content: space-around;">
+    <img src="/FREB-TQA/table_8.png" width="400" height="300" />
+    <img src="/FREB-TQA/table_1.png" width="400" height="300" />
+</div>
 
 
 # How does FREB-TQA differentiate from previous TQA benchmarks?
