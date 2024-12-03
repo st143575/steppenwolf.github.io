@@ -15,8 +15,8 @@ The evaluation of the robustness of architecturally different TQA systems agains
 Current TQA systems generate inconsistent responses by performing coarse-grained changes in tables and questions. Existing benchmarks fail to differentiate between different aspects of robustness. The underlying cause and nature of the lack of robustness of TQA models remains unclear. Thus, it is necessary to pinpoint the exact failures of TQA systems for improving their robustness.
 
 # Research Questions:
-**RQ1:** Are TQA systems robust against table structure changes?
-**RQ2:** Can TQA systems pay attention to relevant cells while being robust against their intrinsic knowledge or positional biases?
+**RQ1:** Are TQA systems robust against table structure changes?  
+**RQ2:** Can TQA systems pay attention to relevant cells while being robust against their intrinsic knowledge or positional biases?  
 **RQ3:** Are TQA systems robust against value changes?
 - **RQ3.1:** To what extent TQA systems perform correct aggregations and adapt answers to the value changes accordingly?
 - **RQ3.2:** Do TQA systems articulate correct answers because of their biases to certain values?
@@ -28,13 +28,14 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 - Evaluate a range of TQA systems with various architectures (end-to-end, pipeline) and off-the-shelf LLMs (GPT-3.5, LLaMA2-13b).
 
 # How is the dataset created?
-- **Step 1:** Start with the dev sets of four existing TQA datasets:
+- **Step 1: Start with the dev sets of four existing TQA datasets:**
   - WikiTableQuestions (**WTQ**)
   - **WikiSQL**
   - Sequential Question Answering (**SQA**)
   - Tabular And Textual dataset for Question Answering (**TAT**)
-- **Step 2:** Eliminate questions related to the table structure using a pre-defined word list, e.g., "*What is the name of the actor in the first row?*"
-- **Step 3:** Group questions into Extraction Questions (EQs) and Reasoning Questions (RQs).
+- **Step 2: Eliminate questions related to the table structure using a pre-defined word list**  
+        e.g., "*What is the name of the actor in the first row?*"
+- **Step 3: Group questions into Extraction Questions (EQs) and Reasoning Questions (RQs)**
   - Goal: To decouple the robustness aspects.
   - **For WTQ:**
     - Heuristics: 
@@ -67,7 +68,7 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
     - Select questions that can be answered only based on tables.
     - If *q* needs derivation or comparison: *q* $\leftarrow$ RQ
     - ELSE: *q* $\leftarrow$ EQ
-- **Step 4:** Perturbation
+- **Step 4: Perturbation**
   - **For RQ1 and EQs:**
     1. Shuffle all rows / columns in a table randomly.
     2. Shift target rows / columns in a table, either to the top, to the middle, or to the bottom (for shifting rows) / either to the front or to the back (for shifting columns). (**also for positional bias in RQ2**)
@@ -129,13 +130,13 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 **Advantages:**
 1. This work disentangles the various aspects of TQA systems’ robustness, which provides fine-grained analyses and deep insights into the underlying cause of their robustness issues.
 2. This work evaluates two classes of TQA systems which have different mechanisms and complete the task in different manners, facilitating the investigation of the impact of system architecture on the robustness.
-3. This work also evaluates a recent LLM (LLaMA2-13b) that works in a generative way, posing challenges in terms of controlled generation, faithfulness and interpretability.
+3. This work also evaluates recent LLMs (GPT-3.5 and LLaMA-7b-chat) that generate answers auto-regressively, posing challenges in terms of controlled generation, faithfulness and interpretability.
 4. This work makes the novel benchmark publicly available, boosting future research on this problem in the community.
 5. This work focuses on the robustness issues of TQA systems that are crucial in real-world applications, e.g., the interaction with relational databases and information extraction.
 
 **Limitations:**
 1. The input tables are serialized into plain text before being fed to the model. Despite its necessity to align with the models input format during training, the serialization process often increases the input length and hence reduces the model’s robustness. The serialized table could omit relevant information across different rows or columns. More serialization methods could be compared to assess the model’s robustness.
-2. This work only evaluates general LLMs, i.e. GPT-3.5 and LLaMA2-13b, which were pre-trained on plain texts. Further evaluations could be done using LLMs specifically trained on the TQA task, which are equipped with a specific table encoder.
+2. This work only evaluates general LLMs, i.e. GPT-3.5 and LLaMA-7b-chat, which were pre-trained on plain texts. Further evaluations could be done using LLMs specifically trained on the TQA task, which are equipped with a specific table encoder.
 3. Humans typically also rely on their visual perception to comprehend the table. Would it be worth adopting multimodal models that takes the screenshot of the table and the textual question as inputs, and generates the answer based on the information from both modalities?
 
 # What insights does this work provides? How could they benefit the future research?
