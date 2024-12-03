@@ -146,7 +146,7 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 2. This work only evaluates general LLMs, i.e. GPT-3.5 and LLaMA-7b-chat, which were pre-trained on plain texts. Further evaluations could be done using LLMs specifically trained on the TQA task, which are equipped with a specific table encoder.
 3. Humans typically also rely on their visual perception to comprehend the table. Would it be worth adopting multimodal models that takes the screenshot of the table and the textual question as inputs, and generates the answer based on the information from both modalities?
 
-# What insights does this work provides? How could they benefit the future research?
+# What insights does this work provide and how could they benefit the future research?
 
 
 
