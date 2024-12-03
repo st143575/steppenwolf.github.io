@@ -9,7 +9,7 @@ tags: [tableQA, benchmark]
 ---
 
 # What problems does this paper address?
-The evaluation of the robustness of architecturally different TQA systems against various types of perturbations.
+The evaluation of the robustness of architecturally different TQA systems against various types of perturbations on the input table.
 
 # What's the motivation of this paper?
 Current TQA systems generate inconsistent responses by performing coarse-grained changes in tables and questions. Existing benchmarks fail to differentiate between different aspects of robustness. The underlying cause and nature of the lack of robustness of TQA models remains unclear. Thus, it is necessary to pinpoint the exact failures of TQA systems for improving their robustness.
