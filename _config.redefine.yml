@@ -130,7 +130,7 @@ home_banner:
     dark: /images/wallhaven-wqery6-dark.webp # dark mode
   # Home banner title
   # title: Theme Redefine
-  title: Herzlich Willkommen zur Mansarde Steppenwolfs
+  title: 遗音沧海如能会，便是千秋共此时
   # Home banner subtitle
   subtitle:
     text: [] # subtitle text, array
