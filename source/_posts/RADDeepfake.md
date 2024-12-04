@@ -1,7 +1,7 @@
 ---
 title: Retrieval-Augmented Audio Deepfake Detection
 date: 2024-12-04 09:26:10
-tags: [audio deepfake detection, RAG]
+tags: [audio deepfake detection, rag]
 ---
 
 *Kang, Z., He, Y., Zhao, B., Qu, X., Peng, J., Xiao, J., & Wang, J. (2024, May). Retrieval-Augmented Audio Deepfake Detection. In Proceedings of the 2024 International Conference on Multimedia Retrieval (pp. 376-384).*

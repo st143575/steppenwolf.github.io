@@ -1,7 +1,6 @@
 ---
 title: >-
-  FREB-TQA: A Fine-Grained Robustness Evaluation Benchmark for Table Question
-  Answering
+  FREB-TQA: A Fine-Grained Robustness Evaluation Benchmark for Table Question Answering
 date: 2024-12-03 12:31:48
 tags: [tableQA, benchmark]
 ---
