@@ -36,6 +36,8 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 - In-depth analyses of the impact of the identified personas and SPP prompt design.
 
 # How does the proposed method (SPP) work?
+{% asset_img figure_2.png 800 700 %}
+
 1. **Persona Identification**
 	- Goal: Identify multiple participants with special personas that are essential for solving the particular task.
 	- Input: a sequence of text describing the task + two demonstration examples
@@ -88,12 +90,18 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 	--------------------
 
 
+# How does SPP differ from previous prompting methods?
+{% asset_img figure_1.png 500 400%}
+{% asset_img table_1.png 800 700%}
+
 # Which models are employed in the experiment?
 - GPT-4
 - GPT-3.5-turbo
 - Llama2-13b-chat
 
 # On which tasks and datasets is the SPP method evaluated? How are they evaluated?
+{% asset_img figure_3.png %}
+
 1. **Trivia Creative Writing (琐事创意写作)**
 	- knowledge-intensive task
 	- write a coherent story while incorporating the answers to N trivia questions
@@ -101,6 +109,8 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 	- two evaluation settings: N = 5 and N = 10
 	- dataset: 1000 questions extracted from TriviaQA
 	- evaluation metric: factual hallucination score = #correct answer mentions / #trivia questions
+
+{% asset_img figure_4.png %}
 
 2. **Codenames Collaborative (机密代号协作)**
 	- knowledge + reasoning + theory of mind
@@ -110,6 +120,8 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 	- dataset: 50 instances constructed based on BigBench’s Codenames task data
 	- evaluation metric: overlapping ratio between predicted words (Guesser) and target words (Spymaster)
 
+{% asset_img figure_5.png %}
+
 3. **Logic Grid Puzzle (逻辑网格谜题)**
 	- reasoning-intensive task
 	- answer questions about house numbers based on given clues
@@ -118,6 +130,8 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 	- evaluation metric: accuracy of the predicted house numbers
 
 # What are the results of the experiments?
+{% asset_img figure_6.png %}
+
 1. **Trivia Creative Writing: SPP > Standard Prompting > Self-Refine [iter=1] > Self-Refine [iter=0] > CoT**
 	- CoT underperforms standard prompting —> CoT is ineffective in eliciting LLM’s knowledge ability, final solution still contains factual errors and hallucinations
 	- Self-Refine: marginal improvements over iterations
@@ -132,6 +146,13 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 3. **Logic Grid Puzzle: SPP > CoT > Self-Refine [iter=1] > Self-Refine [iter=0] > Standard Prompting**
 	- CoT outperforms Standard Prompting —> CoT elicits better reasoning ability
 	- SPP performs the best
+
+{% asset_img table_5.png 600 500%}
+{% asset_img table_6.png 600 500%}
+{% asset_img table_7.png 600 500%}
+{% asset_img figure_8.png 600 500%}
+{% asset_img figure_11.png 600 500%}
+{% asset_img figure_14.png 600 500%}
 
 # What are the most important findings / conclusions of this work?
 - SPP effectively improves both knowledge and reasoning abilities in GPT-4-level LLMs.
