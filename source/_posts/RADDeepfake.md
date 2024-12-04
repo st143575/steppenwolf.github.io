@@ -32,7 +32,7 @@ tags: [audio deepfake detection, RAG]
 # How does the RAD framework differ from pipeline and end-to-end frameworks?
 {% asset_img figure_1.png %}
 
-# How does the RAD method differ from Retrieval-Aumented Generation (RAG)?
+# How does the RAD method differ from Retrieval-Augmented Generation (RAG)?
 {% asset_img figure_3.png %}
 {% asset_img figure_4.png %}
 
