@@ -167,7 +167,7 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 The factual hallucinations are observed in the final output generated using CoT prompting in the knowledge-intensive Triva Creative Writing task (cf. Figure 8, 11).
 
 # How are the factual hallucinations mitigated?
-The factual hallucinations are effectively mitigated by using SPP.
+SPP unleashes the cognitive synergy within an LLM, which effectively simulates different personas that provide productive advice to revise the answer.
 
 # What are the main advantages and limitations of this paper?
 **Advantages:**
