@@ -38,6 +38,8 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 # How does the proposed method (SPP) work?
 {% asset_img figure_2.png 800 700 %}
 
+**In short:** Prompt a single LLM to dynamically simulate multiple personas (e.g., domain expert, target audience etc.), elicit the domain knowledge of each persona, and engage in a multi-turn self-collaboration with self-revision and self-feedback for solving knowledge-intensive and reasoning-intensive tasks.
+
 1. **Persona Identification**
 	- Goal: Identify multiple participants with special personas that are essential for solving the particular task.
 	- Input: a sequence of text describing the task + two demonstration examples
@@ -193,8 +195,10 @@ SPP unleashes the cognitive synergy within an LLM, which effectively simulates d
 # What are the main advantages and limitations of this paper?
 **Advantages:**
 1. SPP works in a solely zero-shot manner, saving resources for training / fine-tuning and data annotation.
-2. SPP mitigates factual hallucinations that are common in CoT.
-3. SPP elicits both knowledge and reasoning abilities in LLMs, improving factuality while maintaining strong reasoning performance.
+2. SPP does not require external knowledge base and additional knowledge retrieval systems (cf. RAG).
+3. The multi-persona role-playing and multi-turn self-collaboration is done by a single LLM and does not require additional LLM instances.
+4. SPP mitigates factual hallucinations in the knowledge-intensive task that are common when using CoT.
+5. SPP elicits both knowledge and reasoning abilities in LLMs, improving factuality while maintaining strong reasoning performance.
 
 **Limitations:**
 1. Even when a fine-grained persona is assigned, the generated answer may still be incorrect.
