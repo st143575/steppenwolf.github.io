@@ -5,7 +5,7 @@ date: 2024-12-04 16:57:15
 tags: [agent, cognitive synergy, persona-based role-playing, prompting technique]
 ---
 
-*Wang, Z., Mao, S., Wu, W., Ge, T., Wei, F., & Ji, H. (2023). Unleashing the emergent cognitive synergy in large language models: A task-solving agent through multi-persona self-collaboration. arXiv preprint arXiv:2307.05300.*
+*Zhenhailong Wang, Shaoguang Mao, Wenshan Wu, Tao Ge, Furu Wei, and Heng Ji. 2024. Unleashing the Emergent Cognitive Synergy in Large Language Models: A Task-Solving Agent through Multi-Persona Self-Collaboration. In Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), pages 257–279, Mexico City, Mexico. Association for Computational Linguistics.*
 
 # What's the motivation of this paper?
 - In real-world scenarios, e.g. creative industries, there is a need to **incorporate diverse information from different domains**.
