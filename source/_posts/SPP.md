@@ -222,10 +222,15 @@ SPP unleashes the cognitive synergy within an LLM, which effectively simulates d
 1. Even when a fine-grained persona is assigned, the generated answer may still be incorrect.
 	- It is unclear to what extent assigning a persona can help enhance domain knowledge in a specific area.
 	- Diagnostic experiments and theoretical investigation are needed to quantify the impact of having a persona or not.
-2. Adopting identical SPP prompt with the same two demo examples for any task is suboptimal.
+
+2. The prompt contains two demo examples. Why do the authors call their method "zero-shot"?
+
+3. Adopting the SPP prompt with the same two demo examples for all tasks is suboptimal.
 	- need better task-specific demo examples
-3. Single-agent cognitive synergist has limited local memory and enables less flexible human-computer interaction.
-4. SPP cannot unleash the cognitive synergist in smaller, less capable models, which posses relatively less instruction-following ability.
+
+4. Single-agent cognitive synergist has limited local memory and enables less flexible human-computer interaction.
+
+5. SPP cannot unleash the cognitive synergist in smaller, less capable models, which posses relatively less instruction-following ability.
 	- The authors claim: A strong instruction-following ability is a pre-requisite for SPP to effectively elicit cognitive synergy in LLMs.
 
 ## What insights does this work provide and how could they benefit the future research?
