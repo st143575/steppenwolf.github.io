@@ -112,7 +112,7 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
  	- *z<sub>f</sub><sup>1</sup>, ... , z<sub>f</sub> <sup>i</sup>, ... , z<sub>f</sub><sup>m</sup>*: feedback from other participants.
  	- *{z<sub>s</sub><sup>0</sup>, z<sub>f</sub><sup>1</sup>, ... , z<sub>f</sub> <sup>i</sup>, ... , z<sub>f</sub><sup>m</sup>}* is iteratively repeated *n* times until reaching the final answer. Here, *j* is the index of the iteration.
 
-## Which models are employed in the experiment?
+## Which models are evaluated?
 - GPT-4
 - GPT-3.5-turbo
 - Llama2-13b-chat
