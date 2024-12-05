@@ -7,35 +7,35 @@ tags: [agent, cognitive synergy, persona-based role-playing, prompting technique
 
 *Zhenhailong Wang, Shaoguang Mao, Wenshan Wu, Tao Ge, Furu Wei, and Heng Ji. 2024. Unleashing the Emergent Cognitive Synergy in Large Language Models: A Task-Solving Agent through Multi-Persona Self-Collaboration. In Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), pages 257–279, Mexico City, Mexico. Association for Computational Linguistics.*
 
-# What's the motivation of this paper?
+## What's the motivation of this paper?
 - In real-world scenarios, e.g. creative industries, there is a need to **incorporate diverse information from different domains**.
 - LLMs still encounter challenges in various knowledge-intensive and reasoning-intensive tasks due to **factual hallucination** and **lack of slow-thinking**.
 - Although CoT prompting and Self-refinement have successfully enhanced the reasoning abilities of LLMs by simulating slow-thinking, **factual hallucination** remains a challenge for LLMs on **knowledge-intensive tasks**.
 - **Standard prompting** suffers from **missing essential information** and **factual errors (hallucinations)**.
 - Previous works on persona-based role-playing are limited by **fixed or task-specific personas**, the need of **additional fine-tuning**, and **increased inference costs** due to the employment of multiple LLM instances.
 
-# What problems does this paper address?
+## What problems does this paper address?
 Transforming a single LLM into a cognitive synergist to solve complex, knowledge- and reasoning-intensive tasks.
 
-# What is cognitive synergy?
+## What is cognitive synergy?
 - A dynamic in which multiple cognitive processes, coorporating to control the same cognitive system, assist each other in overcoming bottlenecks encountered during their interal processing (Goertzel, 2017).
 - The power of collaboration and information integration among different cognitive processes and individuals (defined by this paper).
 
-# What is a cognitive synergist?
+## What is a cognitive synergist?
 An intelligent agent that collaborates with multiple minds to enhance problem-solving and efficacy in complex tasks.
 
-# Research Questions:
+## Research Questions:
 - **RQ1:** Can LLMs leverage cognitive synergy for general task-solving?
 
 - **RQ2:** Why are dynamic, fine-grained personas necessary, as opposed to fixed, coarse-grained personas?
 	- **RQ2.1:** Why is dynamic personas better than fixed ones?
  	- **RQ2.2:** Why is fine-grained personas better than coarse-grained ones?
 
-# What are the main contributions of this paper?
+## What are the main contributions of this paper?
 - **Solo Performance Prompting (SPP)**, the first zero-shot prompting method that transforms a single LLM into a cognitive synergist by engaging in multi-turn self-collaboration with multiple personas, thus enhancing both knowledge and reasoning abilities on GPT-4.
 - In-depth analyses of the impact of the identified personas and the SPP prompt design.
 
-# How does the proposed method (SPP) work?
+## How does the proposed method (SPP) work?
 {% asset_img figure_2.png 800 700 %}
 
 **In short:** Prompt a single LLM to dynamically simulate multiple personas (e.g., domain expert, target audience etc.), elicit the domain knowledge of each persona, and engage in a multi-turn self-collaboration with self-revision and self-feedback for solving knowledge-intensive and reasoning-intensive tasks.
@@ -94,7 +94,7 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
 	--------------------
 
 
-# How does SPP differ from previous prompting methods?
+## How does SPP differ from previous prompting methods?
 {% asset_img figure_1.png 500 400%}
 {% asset_img table_1.png 800 700%}
 
@@ -104,20 +104,20 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 	- *p<sub>cot</sub>*: the CoT prompt, e.g., "Solve the task step by step."
 	- *{z<sub>1</sub>, ... , z<sub>n</sub>}*: the intermediate reasoning steps.
 - Solo Performance Prompting (SPP):
- *y = M(p<sub>spp</sub>* || *x* || *z<sub>p</sub>* || *{z<sub>b</sub><sup>1</sup>, ... , z<sub>b</sub><sup>i</sup>, ... , z<sub>b</sub><sup>m</sup>}* || *{z<sub>s</sub><sup>0</sup>, z<sub>f</sub><sup>1</sup>, ... , z<sub>f</sub><sup>i</sup>, ... , z<sub>f</sub><sup>m</sup>}<sub>j=1,...,n</sub>*)
+ *y = M(p<sub>spp</sub>* || *x* || *z<sub>p</sub>* || *{z<sub>b</sub><sup>1</sup>, ... , z<sub>b</sub><sup>i</sup>, ... , z<sub>b</sub><sup>m</sup>}* || *{z<sub>s</sub><sup>0</sup>, z<sub>f</sub><sup>1</sup>, ... , z<sub>f</sub> <sup>i</sup>, ... , z<sub>f</sub><sup>m</sup>}<sub>j=1,...,n</sub>*)
  	- *p<sub>spp</sub>*: the SPP prompt, including a high-level instruction describing the SPP mechanism, and two demonstration examples.
  	- *z<sub>p</sub>*: a list of personas identified by the LLM.
  	- *{z<sub>b</sub><sup>1</sup>, ... , z<sub>b</sub><sup>i</sup>, ... , z<sub>b</sub><sup>m</sup>}*: intermediate generation for the brainstorming.
  	- *z<sub>s</sub><sup>0</sup>*: initial solution generated by the AI assistant persona.
- 	- *z<sub>f</sub><sup>1</sup>, ... , z<sub>f</sub><sup>i</sup>, ... , z<sub>f</sub><sup>m</sup>*: feedback from other participants.
- 	- *{z<sub>s</sub><sup>0</sup>, z<sub>f</sub><sup>1</sup>, ... , z<sub>f</sub><sup>i</sup>, ... , z<sub>f</sub><sup>m</sup>}* is iteratively repeated *n* times until reaching the final answer. Here, *j* is the index of the iteration.
+ 	- *z<sub>f</sub><sup>1</sup>, ... , z<sub>f</sub> <sup>i</sup>, ... , z<sub>f</sub><sup>m</sup>*: feedback from other participants.
+ 	- *{z<sub>s</sub><sup>0</sup>, z<sub>f</sub><sup>1</sup>, ... , z<sub>f</sub> <sup>i</sup>, ... , z<sub>f</sub><sup>m</sup>}* is iteratively repeated *n* times until reaching the final answer. Here, *j* is the index of the iteration.
 
-# Which models are employed in the experiment?
+## Which models are employed in the experiment?
 - GPT-4
 - GPT-3.5-turbo
 - Llama2-13b-chat
 
-# On which tasks and datasets is the SPP method evaluated? How are they evaluated?
+## On which tasks and datasets is the SPP method evaluated? How are they evaluated?
 {% asset_img figure_3.png %}
 
 1. **Trivia Creative Writing (琐事创意写作)**
@@ -147,7 +147,7 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 	- dataset: Logic Grid Puzzle data from BigBench
 	- evaluation metric: accuracy of the predicted house numbers
 
-# What are the results of the experiments?
+## What are the results of the experiments?
 {% asset_img figure_6.png %}
 
 1. **Trivia Creative Writing: SPP > Standard Prompting > Self-Refine [iter=1] > Self-Refine [iter=0] > CoT**
@@ -172,7 +172,7 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 {% asset_img figure_11.png 600 500%}
 {% asset_img figure_14.png 600 500%}
 
-# What are the most important findings and conclusions of this work?
+## What are the most important findings and conclusions of this work?
 - SPP effectively improves both knowledge and reasoning abilities in GPT-4-level LLMs.
 
 - SOTA LLMs (i.e. GPT-4) can effectively identify accurate and useful personas in a zero-shot manner.
@@ -198,19 +198,19 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 
 - The brainstorming phase effectively improves the quality of the initial solution.
 
-# What do you find most interesting about this work?
+## What do you find most interesting about this work?
 - SPP mitigates factual hallucinations in knowledge-intensive tasks.
 - The cognitive synergy can only be fully unleashed in LLMs with a certain level of instruction-following capabilities, akin to that of GPT-4.
 - The effectiveness of SPP is not seen in smaller and less capable models, such as GPT-3.5 and Llama2-13b-chat.
 - Llama2 has a unique problem, early-termination, where the model stops generating after identifying the participants, behaving as if it were waiting for input from a user instead of following the examples to generate responses on its own (cf. Appendix E).
 
-# What are the origins of factual hallucinations in this task?
+## What are the origins of factual hallucinations in this task?
 The factual hallucinations are observed in the final output generated using CoT prompting in the knowledge-intensive Triva Creative Writing task (cf. Figure 8, 11).
 
-# How are the factual hallucinations mitigated?
+## How are the factual hallucinations mitigated?
 SPP unleashes the cognitive synergy within an LLM, which effectively simulates different personas that provide productive advice to revise the answer.
 
-# What are the main advantages and limitations of this paper?
+## What are the main advantages and limitations of this paper?
 **Advantages:**
 1. SPP works in a solely zero-shot manner, saving resources for training / fine-tuning and data annotation.
 2. SPP does not require external knowledge base and additional knowledge retrieval systems (cf. RAG).
@@ -228,7 +228,7 @@ SPP unleashes the cognitive synergy within an LLM, which effectively simulates d
 4. SPP cannot unleash the cognitive synergist in smaller, less capable models, which posses relatively less instruction-following ability.
 	- The authors claim: A strong instruction-following ability is a pre-requisite for SPP to effectively elicit cognitive synergy in LLMs.
 
-# What insights does this work provide and how could they benefit the future research?
+## What insights does this work provide and how could they benefit the future research?
 - Recent research: Assigning personas / roles to LLMs influences their generation behavior.
 - Limitations in persona assignment and multi-agent collaboration include single or fixed persona assignments and the need for multiple LLM instances increase the inference cost.
 	- SPP: a single LLM, dynamically identify personas
@@ -237,3 +237,19 @@ SPP unleashes the cognitive synergy within an LLM, which effectively simulates d
 - CoT and Self-Refinement simulate human-like slow thinking required in reasoning-intensive tasks, but do not necessarily reduce factual hallucinations.
 - RAG enhances knowledge acquisition, but does not improve the model’s reasoning ability.
 - Solution of this paper: SPP, elicits both knowledge and reasoning abilities of LLMs at GPT-4-level, improving factuality while maintaining strong reasoning performance.
+
+## Comparison between different prompts:
+### SPP full prompt:
+{% asset_img figure_15.png %}
+
+### SPP-Profile prompt:
+{% asset_img figure_16.png %}
+
+### SPP-Fixed-Persona prompt:
+{% asset_img figure_17.png %}
+
+### Chain-of-Thought (CoT) prompts:
+{% asset_img figure_18.png %}
+
+### Self-Refine prompts:
+{% asset_img figure_19.png %}

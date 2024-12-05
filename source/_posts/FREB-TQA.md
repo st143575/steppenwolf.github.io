@@ -7,15 +7,15 @@ tags: [tableQA, benchmark]
 
 *Wei Zhou, Mohsen Mesgar, Heike Adel, and Annemarie Friedrich. 2024. FREB-TQA: A Fine-Grained Robustness Evaluation Benchmark for Table Question Answering. In Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), pages 2479–2497, Mexico City, Mexico. Association for Computational Linguistics.*
 
-# What problems does this paper address?
+## What problems does this paper address?
 The evaluation of the robustness of architecturally different TQA systems against various types of perturbations on the input table.
 
 {% asset_img figure_1.png %}
 
-# What's the motivation of this paper?
+## What's the motivation of this paper?
 Current TQA systems generate inconsistent responses by performing coarse-grained changes in tables and questions. Existing benchmarks fail to differentiate between different aspects of robustness. The underlying cause and nature of the lack of robustness of TQA models remains unclear. Thus, it is necessary to pinpoint the exact failures of TQA systems for improving their robustness.
 
-# Research Questions:
+## Research Questions:
 **RQ1:** Are TQA systems robust against table structure changes?
   - **RQ1.1:** Do TQA systems exhibit any positional biases?
   - **RQ1.2:** Do TQA systems have a bias towards particular table layouts?
@@ -29,13 +29,13 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 - **RQ3.1:** To what extent TQA systems perform correct aggregations and adapt answers to the value changes accordingly?
 - **RQ3.2:** Do TQA systems articulate correct answers because of their biases to certain values?
 
-# What are the main contributions of this paper?
+## What are the main contributions of this paper?
 - Create FREB-TQA, a novel English benchmark for fine-grained analysis of three aspects of the robustness of TQA systems, i.e. (a) retrieval robustness in case of table structure changes; (b) robustness against intrinsic knowledge or positional biases; (c) aggregation / comparison robustness in case of value changes.
 - Design seven novel automatic perturbation methods from the three aspects.
 - Release a dataset with high-quality human annotations.
 - Evaluate a range of TQA systems with various architectures (end-to-end, pipeline) and off-the-shelf LLMs (GPT-3.5, LLaMA2-13b).
 
-# How is the dataset created?
+## How is the dataset created?
 - **Step 1: Start with the dev sets of four existing TQA datasets:**
   - WikiTableQuestions (**WTQ**)
   - **WikiSQL**
@@ -91,18 +91,18 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
   - Quality control: ask two annotators not involved in the perturbation to answer the questions given the perturbed tables.
 
 
-# Data statistics:
+## Data statistics:
 {% asset_img table_8.png %}  
 {% asset_img table_2.png %}  
 {% asset_img table_1.png %}
 
 
-# How does FREB-TQA differentiate from previous TQA benchmarks?
+## How does FREB-TQA differentiate from previous TQA benchmarks?
 - FREB-TQA reveals the key strengths and weaknesses of end-to-end and pipeline TQA systems.
 - Previous work do not disentangle the various aspects of robustness, thus not providing detailed insights into the cause of robustness issues.
 - Previous work analyze the four aspects for other tasks.
 
-# Which systems and models are employed for the evaluation? What are their key differences?
+## Which systems and models are employed for the evaluation? What are their key differences?
 - **End-to-End systems:**
   - **TAPEX:** based on BART
   - **OmniTab:** further fine-tune TAPEX on natural and synthetic data
@@ -113,13 +113,13 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
   - **GPT-3.5:** three-shot prompting
   - **LLaMA-7b-chat:** LORA fine-tuning
 
-# Which evaluation metrics are used?
+## Which evaluation metrics are used?
 - **Exact match accuracy (Em)**
 - **Exact match difference (Emd)**
 - **Variation percentage (VP)**
 
 
-# What are the results of the experiments?
+## What are the results of the experiments?
 {% asset_img figure_3.png %}
 {% asset_img figure_4.png %}
 {% asset_img table_5.png %}
@@ -130,7 +130,7 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 {% asset_img table_11.png %}
 {% asset_img table_12.png %}
 
-# What conclusions are drawn from the results?
+## What conclusions are drawn from the results?
 - All systems suffer from substantial robustness issues.
 - End-to-end TQA systems:
   - more robust against table structure changes
@@ -145,7 +145,7 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
   - intermediate representations (i.e. aggregation function, query) makes the model more explainable
   - pipeline-based paradigm is promising towards more robust TQA
 
-# What are the main advantages and limitations of this paper?
+## What are the main advantages and limitations of this paper?
 **Advantages:**
 1. This work disentangles the various aspects of TQA systems’ robustness, which provides fine-grained analyses and deep insights into the underlying cause of their robustness issues.
 2. This work evaluates two classes of TQA systems which have different mechanisms and complete the task in different manners, facilitating the investigation of the impact of system architecture on the robustness.
@@ -158,7 +158,7 @@ Current TQA systems generate inconsistent responses by performing coarse-grained
 2. This work only evaluates general LLMs, i.e. GPT-3.5 and LLaMA-7b-chat, which were pre-trained on plain texts. Further evaluations could be done using LLMs specifically trained on the TQA task, which are equipped with a specific table encoder.
 3. Humans typically also rely on their visual perception to comprehend the table. Would it be worth adopting multimodal models that takes the screenshot of the table and the textual question as inputs, and generates the answer based on the information from both modalities?
 
-# What insights does this work provide and how could they benefit the future research?
+## What insights does this work provide and how could they benefit the future research?
 
 
 
