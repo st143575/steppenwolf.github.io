@@ -32,8 +32,8 @@ An intelligent agent that collaborates with multiple minds to enhance problem-so
  	- **RQ2.2:** Why is fine-grained personas better than coarse-grained ones?
 
 # What are the main contributions of this paper?
-- **Solo Performance Prompting (SPP)**, the first zero-shot prompting method that enhances both knowledge and reasoning abilities on GPT-4.
-- In-depth analyses of the impact of the identified personas and SPP prompt design.
+- **Solo Performance Prompting (SPP)**, the first zero-shot prompting method that transforms a single LLM into a cognitive synergist by engaging in multi-turn self-collaboration with multiple personas, thus enhancing both knowledge and reasoning abilities on GPT-4.
+- In-depth analyses of the impact of the identified personas and the SPP prompt design.
 
 # How does the proposed method (SPP) work?
 {% asset_img figure_2.png 800 700 %}
