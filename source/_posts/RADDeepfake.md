@@ -4,7 +4,7 @@ date: 2024-12-04 09:26:10
 tags: [audio deepfake detection, rag]
 ---
 
-*Kang, Z., He, Y., Zhao, B., Qu, X., Peng, J., Xiao, J., & Wang, J. (2024, May). Retrieval-Augmented Audio Deepfake Detection. In Proceedings of the 2024 International Conference on Multimedia Retrieval (pp. 376-384).*
+*Zuheng Kang, Yayun He, Botao Zhao, Xiaoyang Qu, Junqing Peng, Jing Xiao, and Jianzong Wang. 2024. Retrieval-Augmented Audio Deepfake Detection. In Proceedings of the 2024 International Conference on Multimedia Retrieval (ICMR '24). Association for Computing Machinery, New York, NY, USA, 376–384. https://doi.org/10.1145/3652583.3658086*
 
 # What problems does this paper address?
 **Audio Deepfake Detection:** Detect model-generated deepfake (DF) audios.

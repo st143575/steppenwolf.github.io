@@ -5,7 +5,7 @@ date: 2024-12-03 12:31:48
 tags: [tableQA, benchmark]
 ---
 
-*Wei Zhou, Mohsen Mesgar, Heike Adel, and Annermarie Friedrich (2024). Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers).*
+*Wei Zhou, Mohsen Mesgar, Heike Adel, and Annemarie Friedrich. 2024. FREB-TQA: A Fine-Grained Robustness Evaluation Benchmark for Table Question Answering. In Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), pages 2479–2497, Mexico City, Mexico. Association for Computational Linguistics.*
 
 # What problems does this paper address?
 The evaluation of the robustness of architecturally different TQA systems against various types of perturbations on the input table.
