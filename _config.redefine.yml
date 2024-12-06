@@ -265,7 +265,7 @@ home:
   # Article tags visibility
   tags:
     enable: true  # Whether to enable
-    limit: 3  # Max number of tags to display
+    limit: 5  # Max number of tags to display
 # HOME PAGE ARTICLE SETTINGS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
