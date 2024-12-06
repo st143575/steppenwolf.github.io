@@ -53,7 +53,7 @@ This paper proposes a plug-in-style method based on prompt tuning, which
 - **WSP:** Whisper + MFCC + MesoNet, SOTA on the In-the-Wild dataset
 
 ## Which datasets are used?
-{% asset_img table_1 %}
+{% asset_img table_1.png %}
 - **Source dataset:** ASVspoof 2019 LA
 - **Target datasets:**
 	- an existing In-the-Wild dataset
@@ -75,14 +75,14 @@ This paper proposes a plug-in-style method based on prompt tuning, which
 No baseline.
 
 ## What are the results or conclusions of the experiments?
-{% asset_img table_2 %}
+{% asset_img table_2.png %}
 - **Result:** Prompt tuning improves or maintains the EERs across most target domains.
 
-{% asset_img table_3 %}
+{% asset_img table_3.png %}
 - **Result:** Prompt tuning of type A and B require only minimal additional trainable parameters.
   **Conclusion:** Prompt tuning is superior to full-parameter fine-tuning (type C) which requires optimizing a huge number of parameters in the foundation model, providing viable alternatives under constrained computational budgets.
 
-{% asset_img table_4 %}
+{% asset_img table_4.png %}
 **Ablation Study: target dataset sizes**
 - **Result:** Prompt tuning reduces EERs in most scenarios.  
   **Conclusion:** The improvement is particularly notable when the target dataset size is limited to 10 samples.  
@@ -91,7 +91,7 @@ No baseline.
 - **Result:** Prompt tuning of type A and B outperforms full-parameter fine-tuning (type C), with and without prompt tuning.  
   **Conclusion:** This superiority attributes to the tendency of full fine-tuning to overfit the small target dataset.
 
-{% asset_img table_5 %}
+{% asset_img table_5.png %}
 **Ablation Study: prompt length**
 - **Result:** The performance saturates rapidly with the increase of the prompt length *N<sub>P</sub>*.  
   **Conclusion:**
