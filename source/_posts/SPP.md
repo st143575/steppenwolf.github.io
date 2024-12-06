@@ -122,30 +122,37 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 
 1. **Trivia Creative Writing (琐事创意写作)**
 	- knowledge-intensive task
-	- write a coherent story while incorporating the answers to N trivia questions
+	- task: write a coherent story while incorporating the answers to N trivia questions
+	- challenge: requires the model to internally acquire and integrate diverse information from various fields
 	- preliminary study: a sufficiently large N can effectively challenge GPT-4 to demonstrate factual knowledge across diverse domains **(insight)**
 	- two evaluation settings: N = 5 and N = 10
-	- dataset: 1000 questions extracted from TriviaQA
+	- dataset: 100 data instances for each N, covering a total of 1000 questions extracted from TriviaQA
 	- evaluation metric: factual hallucination score = #correct answer mentions / #trivia questions
 
 {% asset_img figure_4.png %}
 
 2. **Codenames Collaborative (机密代号协作)**
 	- knowledge + reasoning + theory of mind
-	- two player roles:
-		- Spymaster: provides a hint word related to the target words, and other distractor words
+	- task: two-role collaboration:
+		- Spymaster: provides a hint word related to the target words and other distractor words
 		- Guesser: identifies the target words based on the given hint and the full list of words
-	- dataset: 50 instances constructed based on BigBench’s Codenames task data
+	- challenge: demands creative reasoning across a broad range of related knowledge and challenges the model's theory of mind skills
+	- dataset: 50 data instances constructed based on BigBench’s Codenames task data
 	- evaluation metric: overlapping ratio between predicted words (Guesser) and target words (Spymaster)
 
 {% asset_img figure_5.png %}
 
 3. **Logic Grid Puzzle (逻辑网格谜题)**
 	- reasoning-intensive task
-	- answer questions about house numbers based on given clues
-	- multi-step reasoning and selection of relevant information
+	- task: answer questions about house numbers based on given clues
+	- challenge: multi-step reasoning and selection of relevant information
 	- dataset: Logic Grid Puzzle data from BigBench
 	- evaluation metric: accuracy of the predicted house numbers
+
+## What are the baselines?
+1. Standard Prompting
+2. Chain-of-Thought (CoT) Prompting
+3. Self-Refine
 
 ## What are the results of the experiments?
 {% asset_img figure_6.png %}
