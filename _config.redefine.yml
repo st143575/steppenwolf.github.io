@@ -26,11 +26,11 @@ info:
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: /images/redefine-favicon.svg
+  favicon: /images/steppenwolf-favicon.png
   # Site logo
   logo: 
   # Site avatar
-  avatar: /images/avatar-autumn.jpg
+  avatar: /images/avatar-moonlight.jpg
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
