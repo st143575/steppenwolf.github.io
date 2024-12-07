@@ -6,4 +6,4 @@ tags: joke
 
 Herzlich Willkommen zur Mansarde vom Steppenwolf!
 
-Diese Mansarde gehört allen, die zwischen zwei Zeiten hineingeraten, die aus aller Geborgenheit und Unschuld herausgefallen sind, zu denen, deren Schicksal es ist, alle Fragwürdigkeit des Menschenlebens gesteigert als persönliche Qual und Hölle zu erleben.
+Diese Mansarde gehört zu denen, die zwischen zwei Zeiten hineingeraten, die aus aller Geborgenheit und Unschuld herausgefallen sind, zu denen, deren Schicksal es ist, alle Fragwürdigkeit des Menschenlebens gesteigert als persönliche Qual und Hölle zu erleben.
