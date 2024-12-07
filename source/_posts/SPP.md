@@ -149,17 +149,18 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 	- dataset: Logic Grid Puzzle data from BigBench
 	- evaluation metric: accuracy of the predicted house numbers
 
-## What are the baselines?
+## What are the baseline methods?
 1. Standard Prompting
 2. Chain-of-Thought (CoT) Prompting
 3. Self-Refine
 
 ## What are the results of the experiments?
-{% asset_img figure_6.png %}
+{% asset_img table_2.png 600 500 %}
 
 1. **Trivia Creative Writing: SPP > Standard Prompting > Self-Refine [iter=1] > Self-Refine [iter=0] > CoT**
 	- CoT underperforms standard prompting —> CoT is ineffective in eliciting LLM’s knowledge ability, final solution still contains factual errors and hallucinations
-	- Self-Refine: marginal improvements over iterations
+	{% asset_img figure_11.png 600 500%}
+	- Self-Refine: only marginal improvements over iterations
 	- SPP outperforms all baselines significantly —> SPP is particularly beneficial when the task requires incorporating knowledge from numerous domains
 
 2. **Codenames Collaborative: SPP > Standard Prompting > Self-Refine [iter=0] > CoT > Self-Refine [iter=1]**
@@ -175,14 +176,14 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 {% asset_img table_5.png 600 500%}
 {% asset_img table_6.png 600 500%}
 {% asset_img table_7.png 600 500%}
-{% asset_img figure_8.png 600 500%}
-{% asset_img figure_11.png 600 500%}
-{% asset_img figure_14.png 600 500%}
 
 ## What are the most important findings and conclusions of this work?
-- SPP effectively improves both knowledge and reasoning abilities in GPT-4-level LLMs.
+{% asset_img figure_6.png %}
 
-- SOTA LLMs (i.e. GPT-4) can effectively identify accurate and useful personas in a zero-shot manner.
+- **SPP effectively unleashes cognitive synergy and improves both knowledge and reasoning abilities in GPT-4-level LLMs, but not in smaller, less capable models, such as GPT-3.5-turbo and Llama2-13b-chat.**
+
+- **SOTA LLMs (i.e. GPT-4) can effectively identify accurate and useful personas in a zero-shot manner.**
+  {% asset_img figure_7_a.png 300 200 %}
 	- Are the identified personas highly relevant to the tasks?
 		- Yes.
 		- On knowledge-intensive tasks: SPP identifies more diverse and specific personas.
@@ -192,24 +193,33 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 		- SPP > SPP-Profile
 		- A fine-grained persona without a detailed profile may already be sufficient for eliciting certain domain knowledge.
 
-- Dynamic, fine-grained personas vs. fixed, general personas:
+{% asset_img figure_7_b.png 600 500 %}
+
+- **Dynamic, fine-grained personas vs. fixed, general personas:**
+  {% asset_img figure_8.png 600 500%}
 	- SPP-Fixed-Persona: forcing the personas to be fixed as an "AI Assistant" and an "Expert"
 	- SPP  > SPP-Fixed-Persona
 	- Dynamic, fine-grained personas are more effective than fixed, general personas.
-	- Fixed personas suffer from the early-termination problem.
+	- Fixed personas induces the *early-termination problem*, where the model stops generating after identifying the participants.
+	  {% asset_img figure_14_2.png 600 500%}
+	- Removing the system message can effectively reduce the early-termination problem, but cannot fully eliminate it.
+	  {% asset_img table_4.png 600 500 %}
 
-- Impact of demonstration examples in SPP prompt:
+- **Impact of demonstration examples in SPP prompt:**
+  {% asset_img figure_9.png 400 300 %}
 	- Ablation study: remove the second demo example which contains more than two personas
 	- SPP is fairly robust to the prompt change and show good performance with only the first demo example.
 	- Adding the second demonstration example which requires collaboration of more than two personas further boosts the performance.
 
-- The brainstorming phase effectively improves the quality of the initial solution.
+- **The brainstorming phase effectively improves the quality of the initial solution.**
+  {% asset_img figure_2_brainstorming.png 600 500 %}
 
 ## What do you find most interesting about this work?
 - SPP mitigates factual hallucinations in knowledge-intensive tasks.
 - The cognitive synergy can only be fully unleashed in LLMs with a certain level of instruction-following capabilities, akin to that of GPT-4.
 - The effectiveness of SPP is not seen in smaller and less capable models, such as GPT-3.5 and Llama2-13b-chat.
-- Llama2 has a unique problem, early-termination, where the model stops generating after identifying the participants, behaving as if it were waiting for input from a user instead of following the examples to generate responses on its own (cf. Appendix E).
+- Llama2 suffers from a unique *early-termination problem*, where the model stops generating after identifying the participants, behaving as if it were waiting for input from a user instead of following the examples to generate responses on its own (cf. Appendix E).
+{% asset_img figure_14_1.png 600 500 %}
 
 ## What are the origins of factual hallucinations in this task?
 The factual hallucinations are observed in the final output generated using CoT prompting in the knowledge-intensive Triva Creative Writing task (cf. Figure 8, 11).
