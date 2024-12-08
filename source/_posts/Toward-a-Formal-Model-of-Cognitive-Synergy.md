@@ -40,7 +40,7 @@ tags: [cognitive synergy, agent]
 - Markov Decision Process (MDP): a classical formalization of sequential decision making, where actions affect not only immediate rewards, but also subsequent states and future rewards.
 - Markov property: The probability of each possible value for the state and reward depends only on the immediately preceding state and action.
 
-1. Agent sends symbols from a finite *action space* $$ \mathcal{A} $$ to the environment, i.e. taking an action.
+1. Agent sends symbols from a finite *action space* $\mathcal{A}$ to the environment, i.e. taking an action.
 2. The environment sends signals to the agent with symbols from a *state space* $\mathcal{S}$
 3. Agent receives a reward from the *reward space* $\mathcal{R}$.
 
