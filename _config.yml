@@ -54,6 +54,11 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+mathjax:
+  enable: true
+  per_page: false
+  cdn: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js
+  config: TeX-AMS-MML_HTMLorMML
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
