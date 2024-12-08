@@ -127,7 +127,7 @@ Given an LLM *M* and an input sequence *x* specifying the task to be solved,
 	- preliminary study: a sufficiently large N can effectively challenge GPT-4 to demonstrate factual knowledge across diverse domains **(insight)**
 	- two evaluation settings: N = 5 and N = 10
 	- dataset: 100 data instances for each N, covering a total of 1000 questions extracted from TriviaQA
-	- evaluation metric: factual hallucination score = #correct answer mentions / #trivia questions
+	- evaluation metric: factual hallucination score = $\frac{\text{number of correct answer mentions}}{\text{number of trivia questions}}$
 
 {% asset_img figure_4.png %}
 
