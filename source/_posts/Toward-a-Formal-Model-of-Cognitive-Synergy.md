@@ -2,7 +2,6 @@
 title: Toward a Formal Model of Cognitive Synergy
 date: 2024-12-06 10:07:57
 tags: [cognitive synergy, agent]
-mathjax: true
 ---
 
 *Ben Goertzel. (2017). Toward a formal model of cognitive synergy. arXiv preprint arXiv:1703.04361.*
